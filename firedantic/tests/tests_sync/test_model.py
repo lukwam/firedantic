@@ -18,6 +18,7 @@ from firedantic.tests.tests_sync.conftest import (
     CustomIDModel,
     CustomIDModelExtra,
     Product,
+    Profile,
     TodoList,
     User,
     UserStats,
@@ -452,3 +453,19 @@ def test_reload(configure_db):
     another_user = User(name="Another")
     with pytest.raises(ModelNotFoundError):
         another_user.reload()
+
+
+def test_save_with_exclude_none(configure_db):
+    p = Profile(name="Foo")
+    p.save(exclude_none=True)
+    p.reload()
+    assert p.model_dump(exclude={"id"}) == {"name": "Foo", "photo_url": None}
+    assert p.model_dump(exclude={"id"}, exclude_none=True) == {"name": "Foo"}
+
+
+def test_save_with_exclude_unset(configure_db):
+    p = Profile(photo_url=None)
+    p.save(exclude_unset=True)
+    p.reload()
+    assert p.model_dump(exclude={"id"}) == {"name": "", "photo_url": None}
+    assert p.model_dump(exclude={"id"}, exclude_unset=True) == {"photo_url": None}
