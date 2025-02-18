@@ -7,6 +7,14 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.8.3] - 2025-02-18
+
+### Fixed
+
+- Switched Firestore `query.where()` to use the 'filter' keyword argument instead of
+  positional arguments. This eliminates a UserWarning that was introduced in
+  `google-cloud-firestore` 2.11.0.
+
 ## [0.8.2] - 2025-02-17
 
 ### Added
@@ -256,7 +264,8 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Update README.md
 - Update .gitignore
 
-[unreleased]: https://github.com/ioxiocom/firedantic/compare/0.8.2...HEAD
+[unreleased]: https://github.com/ioxiocom/firedantic/compare/0.8.3...HEAD
+[0.8.3]: https://github.com/ioxiocom/firedantic/compare/0.8.2...0.8.3
 [0.8.2]: https://github.com/ioxiocom/firedantic/compare/0.8.1...0.8.2
 [0.8.1]: https://github.com/ioxiocom/firedantic/compare/0.8.0...0.8.1
 [0.8.0]: https://github.com/ioxiocom/firedantic/compare/0.7.2...0.8.0
