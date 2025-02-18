@@ -7,6 +7,12 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.8.2] - 2025-02-17
+
+### Added
+
+- Added support for `exclude_none` and `exclude_unset` in `save` method.
+
 ## [0.8.1] - 2024-12-09
 
 ### Changed
@@ -250,7 +256,8 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Update README.md
 - Update .gitignore
 
-[unreleased]: https://github.com/ioxiocom/firedantic/compare/0.8.1...HEAD
+[unreleased]: https://github.com/ioxiocom/firedantic/compare/0.8.2...HEAD
+[0.8.2]: https://github.com/ioxiocom/firedantic/compare/0.8.1...0.8.2
 [0.8.1]: https://github.com/ioxiocom/firedantic/compare/0.8.0...0.8.1
 [0.8.0]: https://github.com/ioxiocom/firedantic/compare/0.7.2...0.8.0
 [0.7.2]: https://github.com/ioxiocom/firedantic/compare/0.7.1...0.7.2
