@@ -5,6 +5,11 @@ import re
 from pathlib import Path
 
 SUBS = [
+    (
+        "from google.cloud.firestore_v1.async_transaction",
+        "from google.cloud.firestore_v1.transaction",
+    ),
+    ("AsyncTransaction", "Transaction"),
     ("google.cloud.firestore_v1.async_query", "google.cloud.firestore_v1.base_query"),
     ("AsyncQuery", "BaseQuery"),
     ("AsyncCollectionReference", "CollectionReference"),
